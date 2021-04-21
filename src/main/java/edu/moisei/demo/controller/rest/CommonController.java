@@ -22,8 +22,6 @@ import java.io.PrintWriter;
 public class CommonController {
     @GetMapping(value = "/input")
     public String showMainPage() throws IOException {
-        ReaderHTML readerHTML = new ReaderHTML();
-        String mainPage = readerHTML.readUsingFiles("/Users/vovamv/Desktop/Учоба/Java/FirstSpringLesson/src/main/resources/static/inputs.html");
         return "<!DOCTYPE html>\n" +
                "<html lang=\"en\">\n" +
                "<head>\n" +
