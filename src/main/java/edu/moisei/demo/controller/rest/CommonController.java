@@ -24,7 +24,22 @@ public class CommonController {
     public String showMainPage() throws IOException {
         ReaderHTML readerHTML = new ReaderHTML();
         String mainPage = readerHTML.readUsingFiles("/Users/vovamv/Desktop/Учоба/Java/FirstSpringLesson/src/main/resources/static/inputs.html");
-        return mainPage;
+        return "<!DOCTYPE html>\n" +
+               "<html lang=\"en\">\n" +
+               "<head>\n" +
+               "    <meta charset=\"UTF-8\">\n" +
+               "    <title>Laba 1</title>\n" +
+               "</head>\n" +
+               "<body>\n" +
+               "    <h1 align=\"center\">Laba 1</h1>\n" +
+               "    <br>\n" +
+               "    <form action=\"title\" method=\"post\">\n" +
+               "        <input type=\"text\" name=\"name\" placeholder=\"Enter name\">\n" +
+               "        <input type=\"text\" name=\"theme\" placeholder=\"Enter theme\">\n" +
+               "        <input type=\"submit\" value=\"Submit\">\n" +
+               "    </form>\n" +
+               "</body>\n" +
+               "</html>";
     }
 
     @RequestMapping(value = "/title")
