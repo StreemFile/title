@@ -17,9 +17,9 @@ import java.io.PrintWriter;
  * @DateTime: 11.02.2021|11:37
  * @Version CommonController: 1.0
  */
-@RestController
+@RestController(value = "/")
 public class CommonController {
-    @RequestMapping
+    @RequestMapping(value = "/")
     public String showMainPage() throws IOException {
         ReaderHTML readerHTML = new ReaderHTML();
         String mainPage = readerHTML.readUsingFiles("/Users/vovamv/Desktop/Учоба/Java/FirstSpringLesson/src/main/resources/static/inputs.html");
