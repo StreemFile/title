@@ -1,6 +1,7 @@
 package edu.moisei.demo.controller.rest;
 
 import edu.moisei.demo.ReaderHTML;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,7 +20,7 @@ import java.io.PrintWriter;
  */
 @RestController(value = "/")
 public class CommonController {
-    @RequestMapping(value = "/input")
+    @GetMapping(value = "/input")
     public String showMainPage() throws IOException {
         ReaderHTML readerHTML = new ReaderHTML();
         String mainPage = readerHTML.readUsingFiles("/Users/vovamv/Desktop/Учоба/Java/FirstSpringLesson/src/main/resources/static/inputs.html");
